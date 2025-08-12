@@ -2,11 +2,11 @@
 #SBATCH --job-name=multif  # Job name
 #SBATCH --output=logs/%j.out # Name of stdout output file
 #SBATCH --error=logs/%j.err  # Name of stderr error file
-#SBATCH --partition=standard-g  # Partition (queue) name
+#SBATCH --partition=dev-g  # Partition (queue) name
 #SBATCH --nodes=1              # Total number of nodes
 #SBATCH --ntasks-per-node=1     # 8 MPI ranks per node, 128 total (16x8)
 #SBATCH --gpus-per-node=8
-#SBATCH --time=03:00:00       # Run time (d-hh:mm:ss)
+#SBATCH --time=01:00:00       # Run time (d-hh:mm:ss)
 #SBATCH --mem=480G
 #SBATCH --account=project_462000353  # Project for billing
 
@@ -21,7 +21,7 @@ model_path="$1"
 python multi_turn_instruct_following_eval_vllm.py \
         --model_path $model_path \
         --tokenizer_path $model_path \
-        --input_data_csv data/Multi-IF/multiIF_20241018_english.csv \
+        --input_data_csv data/multiIF_20241018_english.csv \
         --batch_size 64 \
         --tensor_parallel_size 8
 
