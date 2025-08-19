@@ -9,6 +9,7 @@ sbatch launch_multif.sh <path_to_model>
 sbatch launch_multif.sh meta-llama/Llama-3.1-8B-Instruct
 ```
 
+** End of LUMI documentation **
 
 # Multi-Turn Evaluation Framework
 
