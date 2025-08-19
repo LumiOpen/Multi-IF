@@ -1,3 +1,15 @@
+
+
+# LUMI documentation
+
+To run eval and display result summary:
+
+```
+sbatch launch_multif.sh <path_to_model>
+sbatch launch_multif.sh meta-llama/Llama-3.1-8B-Instruct
+```
+
+
 # Multi-Turn Evaluation Framework
 
 This repository contains a Python implementation of a multi-turn evaluation benchmark for large language model (LLM). The benchmark is designed to evaluate the performance of LLM models' capabilities in multi-turn instruction following within a multilingual environment.
